@@ -7,7 +7,8 @@ export default class View {
     this.track.innerHTML = `
     <div class="media">
       <div class="media-left">
-        <img class="track__frame">
+        <div class="track__frame">
+          <img class="track__img" src="" alt="">
       </div>
     </div>
     <div class="media-content">
