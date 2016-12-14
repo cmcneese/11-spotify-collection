@@ -1,14 +1,15 @@
 import 'whatwg-fetch';
-import data from './katy.json';
+import data from './data';
 import Model from './app/model';
 import View from './app/view';
 
-data.tracks.items.forEach((item) => {
-  const model = new Model(item);
+const results = document.querySelector('.results');
 
-  const view = new View(model);
+json.tracks.items.forEach((item) => {
+  const track = new Model(item);
+  const view = new View(track);
 
-  const results = document.querySelector('.results');
-  results.appendChild(view.track);
+  results.appendChild(view.el);
+
   view.render();
 });

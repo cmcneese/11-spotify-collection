@@ -1,8 +1,10 @@
+
 export default class Model {
-  constructor(track) {
-    this.artist = track.artists[0].name;
-    this.name = track.name;
-    this.image = track.album.images[0].url;
-    this.url = track.external_urls.spotify;
+
+  constructor(data) {
+    this.artist = data.artists[0].name;
+    this.name = data.name;
+    this.image = data.album.images[2].url;
+    this.href = data.external_urls.spotify;
   }
 }

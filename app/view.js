@@ -1,31 +1,43 @@
-export default class View {
+export default class Track {
   constructor(model) {
     this.model = model;
-    this.track = document.createElement('div');
-    this.track.classList.add('panel-block');
-    this.track.classList.add('track');
-    this.track.innerHTML = `
-    <div class="media">
-      <div class="media-left">
-        <div class="track__frame">
-          <img class="track__img" src="" alt="">
+
+        // Element Setup
+        // <div class="character">
+        //   <p class="character__name"></p>
+        //   <p class="character__profession"></p>
+        //   <p class="character__age"></p>
+        // </div>
+    this.el = document.createElement('div');
+    this.el.classList.add('panel-block');
+    this.el.classList.add('track');
+    this.el.innerHTML = `
+      <div class=".track panel-block">
+        <div class="media">
+          <div class="media-left">
+            <div class="track__frame">
+              <img class="track__img"/>
+            </div>
+          </div>
+          <div class="media-content">
+            <p class="track__artist"></p>
+            <p class="track__name"></p>
+          </div>
+          <div class="media-right">
+          <a class="track__link" target="_blank">
+           <span class="fa fa-spotify fa-3x"></span>
+          </a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="media-content">
-      <h2 class="track__artist"></h2>
-      <h4 class="track__name"></h4>
-    </div>
-    <div class="media-right">
-      <div class="track__url">
-        <a class="track__link">
-          <span class="fa fa-spotify fa-3x"></span>
-        </a>
-      </div>`;
+       `;
   }
+
   render() {
-    this.track.querySelector('.track__artist').innerText = this.model.artist;
-    this.track.querySelector('track__name').innerText = this.model.name;
-    this.track.querySelector('track__img').src = this.model.image;
-    this.track.querySelector('track__link').href = this.model.url;
+        // Element Filling - rendering
+    this.el.querySelector('.track__name').innerText = this.model.name;
+    this.el.querySelector('.track__artist').innerText = this.model.artist;
+    this.el.querySelector('.track__img').src = this.model.image;
+    this.el.querySelector('.track__link').href = this.model.href;
   }
 }
