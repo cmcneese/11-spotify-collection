@@ -9,11 +9,15 @@ $white: hsl(0, 0%, 21%);
 @import 'font-awesome/scss/font-awesome';
 
 .page {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   overflow: hidden;
 
-  display: flex;
-  flex-direction: column;
+}
+
+.fa:hover {
+  color: #00d1b2;
 }
 
 .panel {

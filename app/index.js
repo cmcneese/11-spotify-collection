@@ -1,7 +1,7 @@
 import 'whatwg-fetch';
-import data from './data';
-import Model from './app/model';
-import View from './app/view';
+import Data from './data';
+import View from './Spotify-Track/view';
+import Model from './Spotify-Track/model';
 
 const results = document.querySelector('.results');
 
