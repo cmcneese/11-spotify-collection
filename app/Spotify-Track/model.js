@@ -5,6 +5,6 @@ export default class Model {
     this.artist = data.artists[0].name;
     this.name = data.name;
     this.image = data.album.images[2].url;
-    this.href = data.external_urls.spotify;
+    this.href = data.`https://open.spotify.com`.spotify;
   }
 }
