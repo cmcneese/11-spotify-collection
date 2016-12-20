@@ -1,11 +1,11 @@
 import 'whatwg-fetch';
-import Data from './data.json';
+import data from './data.json';
 import View from './Spotify-Track/view';
 import Model from './Spotify-Track/model';
 
 
-json.tracks.items.forEach((item) => {
-  const track = new Model(item);
+data.tracks.items.forEach((item) => {
+  const model = new Model(item);
   const view = new View(model);
 
   const results = document.querySelector('.results');
