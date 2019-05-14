@@ -1,16 +1,23 @@
 // @import 'yoga-sass/assets/yoga';
 // @import 'normalize-css/normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-@import 'font-awesome/scss/font-awesome';
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'box-sizing';
 
 $white: hsl(0, 0%, 21%);
-
 @import 'bulma/bulma';
 @import 'font-awesome/scss/font-awesome';
 
 .page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+.fa:hover {
+  color: #00d1b2;
   height: 100vh;
   overflow: hidden;
 
