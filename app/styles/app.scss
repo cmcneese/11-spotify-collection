@@ -18,6 +18,11 @@ $white: hsl(0, 0%, 21%);
 
 .fa:hover {
   color: #00d1b2;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .panel {
